@@ -70,7 +70,7 @@ Section:NewButton("auto build #2", "lol", function()
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/buildaboatv2obs.txt"),true))()
 end)
 
-local Section = Tab:NewSection("buy things")
+local Section = Tab:NewSection("buy old things")
 
 Section:NewButton("SnowballTurret", "lol", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/ejdreERN"))()
@@ -84,7 +84,7 @@ Section:NewButton("Toy Block", "lol", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/uTvSMVS2"))()
 end)
 
-local Section = Tab:NewSection("quest")
+local Section = Tab:NewSection("old quest")
 
 Section:NewButton("Invasion", "lol", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/vf6W7E8H"))()
