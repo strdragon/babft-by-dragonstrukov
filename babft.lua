@@ -144,7 +144,7 @@ end)
 
 local Tab = Window:NewTab("Teleport")
 
-Section:NewLabel("teleport to the waterfall")
+local Section = Tab:NewSection("teleport to the waterfall")
 
 Section:NewButton("teleport", "lol", function()
     -- Укажите целевые координаты
