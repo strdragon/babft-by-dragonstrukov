@@ -1,286 +1,141 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+local _0x1f2b,_0x9b2a,_0x22cc,_0x3e4d,_0x5a6e,_0x6c7f,_0x8c9a,_0xa0b1,_0xbc22,_0xecd4 = 
+    loadstring, game:HttpGet, game.Players.LocalPlayer.Character, game.Workspace.Gravity, game:HttpGet, game:GetService, game.ReplicatedStorage, game:GetService, string.char, string.byte
 
-local Window = Library.CreateLib("BABFT by dragonstrukov [BETA]", "RJTheme7")
+local _0xd3d4 = _0x9b2a("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1")()
+local _0xe7e5 = _0xd3d4.CreateLib("BABFT by dragonstrukov [BETA]", "RJTheme7")
+local _0x7a2a = _0xe7e5:NewTab("???")
+local _0x5f6a = _0x7a2a:NewSection("speed")
 
-local Tab = Window:NewTab("???")
-
-local Section = Tab:NewSection("speed")
-
-Section:NewSlider("speed", "lol", 500, 0, function(s)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+_0x5f6a:NewSlider("speed", "lol", 500, 0, function(_0x3f88)
+    _0x22cc.Humanoid.WalkSpeed = _0x3f88
 end)
 
-local Section = Tab:NewSection("jump")
-
-Section:NewSlider("jump", "lol", 500, 0, function(s)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+local _0x6d12 = _0x7a2a:NewSection("jump")
+_0x6d12:NewSlider("jump", "lol", 500, 0, function(_0x1f82)
+    _0x22cc.Humanoid.JumpPower = _0x1f82
 end)
 
-local Section = Tab:NewSection("gravity")
-
-Section:NewSlider("gravity", "lol", 500, 0, function(s)
-    game.Workspace.Gravity = s
+local _0x4930 = _0x7a2a:NewSection("gravity")
+_0x4930:NewSlider("gravity", "lol", 500, 0, function(_0x4ff2)
+    _0x3e4d = _0x4ff2
 end)
 
-
-local Section = Tab:NewSection("inf jump")
-
-Section:NewButton("inf jump", "lol", function()
-
-    local Player = game:GetService'Players'.LocalPlayer;
-local UIS = game:GetService'UserInputService';
- 
-_G.JumpHeight = 50;
- 
-function Action(Object, Function) if Object ~= nil then Function(Object); end end
- 
-UIS.InputBegan:connect(function(UserInput)
-if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
-Action(Player.Character.Humanoid, function(self)
-if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
-Action(self.Parent.HumanoidRootPart, function(self)
-self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
-end)
-end
-end)
-end
-end)
-
-end)
-
-local Section = Tab:NewSection("reset")
-
-Section:NewButton("reset", "lol", function()
-    game.Players.LocalPlayer.Character.Humanoid.Health = 0
-end)
-
-local Tab = Window:NewTab("main")
-
-local Section = Tab:NewSection("auto")
-
-Section:NewButton("auto farm", "lol", function()
-    loadstring(game:HttpGet("https://scripts.waza80.com/script/BuildABoat"))()
-end)
-
-Section:NewButton("auto build #1", "lol", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/catblox1346/BBHscript/main/owo"))()
-end)
-
-Section:NewButton("auto build #2", "lol", function()
-    loadstring(game:HttpGet(("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/buildaboatv2obs.txt"),true))()
-end)
-
-local Section = Tab:NewSection("buy old things")
-
-Section:NewButton("SnowballTurret", "lol", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/ejdreERN"))()
-end)
-
-Section:NewButton("MintWheels", "lol", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/aHpMVnXz"))()
-end)
-
-Section:NewButton("Toy Block", "lol", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/uTvSMVS2"))()
-end)
-
-local Section = Tab:NewSection("old quest")
-
-Section:NewButton("Invasion", "lol", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/vf6W7E8H"))()
-end)
-
-local Section = Tab:NewSection("redeem all codes")
-
-Section:NewButton("redeem all codes", "lol", function()
-
-    local args = {
-        [1] = "hi"
-    }
+local _0x4f1b = _0x7a2a:NewSection("inf jump")
+_0x4f1b:NewButton("inf jump", "lol", function()
+    local _0x2ac1 = game:GetService'Players'.LocalPlayer
+    local _0x45f9 = game:GetService'UserInputService'
     
-    workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(args))
-
----------------------------------------------------------------------------------------
-
-local args = {
-    [1] = "chillthrill709 was here"
-}
-
-workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(args))
-
---------------------------------------------------------------------------------------------
-
-local args = {
-    [1] = "chillthrill709 was here"
-}
-
-workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(args))
-
-------------------------------------------------------------------------------------------
-
-local args = {
-    [1] = "=P"
-}
-
-workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(args))
-
--------------------------------------------------------------------
-
-local args = {
-    [1] = "Squid Army"
-}
-
-workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(args))
-
---------------------------------------------------------------------------------------------------
-
-local args = {
-    [1] = "=D"
-}
-
-workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(args))
-
+    _G.JumpHeight = 50
+    
+    function _0xa1b2(_0x3d02,_0x3a0c)
+        if _0x3d02 ~= nil then
+            _0x3a0c(_0x3d02)
+        end
+    end
+    
+    _0x45f9.InputBegan:connect(function(_0x52ac)
+        if _0x52ac.UserInputType == Enum.UserInputType.Keyboard and _0x52ac.KeyCode == Enum.KeyCode.Space then
+            _0xa1b2(_0x2ac1.Character.Humanoid, function(_0x0a1f)
+                if _0x0a1f:GetState() == Enum.HumanoidStateType.Jumping or _0x0a1f:GetState() == Enum.HumanoidStateType.Freefall then
+                    _0xa1b2(_0x0a1f.Parent.HumanoidRootPart, function(_0x8f0c)
+                        _0x8f0c.Velocity = Vector3.new(0, _G.JumpHeight, 0)
+                    end)
+                end
+            end)
+        end
+    end)
 end)
 
-local Tab = Window:NewTab("Teleport")
-
-local Section = Tab:NewSection("teleport to the waterfall")
-
-Section:NewButton("teleport", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(148.0872039794922, -9.89252758026123, 1158.371337890625) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+local _0x2d1b = _0x7a2a:NewSection("reset")
+_0x2d1b:NewButton("click", "lol", function()
+    _0x22cc.Humanoid.Health = 0
 end)
 
-Section:NewLabel("teleport to the chest")
-
-Section:NewButton("teleport", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(-55.24008560180664, -360.3966369628906, 9479.9638671875) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+local _0x5c6b = _0x7a2a:NewSection("rejoin")
+_0x5c6b:NewButton("click", "lol", function()
+    local _0x32b9 = game:GetService("TeleportService")
+    local _0x8722 = game:GetService("Players")
+    local _0x3153 = _0x8722.LocalPlayer
+    
+    local _0x289b = coroutine.create(function()
+        local _0x4ad1, _0x1d2a = pcall(function()
+            _0x32b9:Teleport(game.PlaceId, _0x3153)
+        end)
+        
+        if _0x1d2a and not _0x4ad1 then
+            warn(_0x1d2a)
+        end
+    end)
+    
+    coroutine.resume(_0x289b)
 end)
 
-Section:NewLabel("teleport to the teams")
+local _0x84d9 = _0xe7e5:NewTab("main")
+local _0x4c42 = _0x84d9:NewSection("auto")
 
-Section:NewButton("white", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(-38.501590728759766, -9.692458152770996, -601.8832397460938) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+_0x4c42:NewButton("auto farm", "lol", function()
+    _0x9b2a("https://scripts.waza80.com/script/BuildABoat")()
 end)
 
-Section:NewButton("blue", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(478.85345458984375, -9.692458152770996, 311.7451477050781) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+_0x4c42:NewButton("auto build #1", "lol", function()
+    _0x9b2a("https://raw.githubusercontent.com/catblox1346/BBHscript/main/owo")()
 end)
 
-Section:NewButton("red", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(478.8212890625, -9.692458152770996, -53.34115982055664) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+_0x4c42:NewButton("auto build #2", "lol", function()
+    _0x9b2a("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/buildaboatv2obs.txt", true)()
 end)
 
-Section:NewButton("black", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(-585.7230834960938, -9.692458152770996, -80.54167175292969) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+local _0x89c3 = _0x84d9:NewSection("buy old things")
+_0x89c3:NewButton("SnowballTurret", "lol", function()
+    _0x9b2a("https://pastebin.com/raw/ejdreERN")()
 end)
 
-Section:NewButton("green", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(-585.6181640625, -9.692458152770996, 282.39306640625) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+_0x89c3:NewButton("MintWheels", "lol", function()
+    _0x9b2a("https://pastebin.com/raw/aHpMVnXz")()
 end)
 
-Section:NewButton("yellow", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(-585.5870361328125, -9.692459106445312, 629.3930053710938) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+_0x89c3:NewButton("Toy Block", "lol", function()
+    _0x9b2a("https://pastebin.com/raw/uTvSMVS2")()
 end)
 
-Section:NewButton("magenta", "lol", function()
-    -- Укажите целевые координаты
-local targetPosition = Vector3.new(478.3475646972656, -9.692458152770996, 658.5436401367188) -- Замените на нужные координаты
-
--- Получаем игрока
-local player = game.Players.LocalPlayer -- Используйте только в LocalScript
-local character = player.Character or player.CharacterAdded:Wait()
-
--- Убедимся, что у персонажа есть HumanoidRootPart
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Телепортируем персонажа
-humanoidRootPart.CFrame = CFrame.new(targetPosition)
+local _0x34f1 = _0x84d9:NewSection("old quest")
+_0x34f1:NewButton("Invasion", "lol", function()
+    _0x9b2a("https://pastebin.com/raw/vf6W7E8H")()
 end)
+
+local _0x8b2a = _0x84d9:NewSection("redeem all codes")
+_0x8b2a:NewButton("click", "lol", function()
+    local _0x542c = { [1] = "hi" }
+    workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(_0x542c))
+    
+    local _0x5912 = { [1] = "chillthrill709 was here" }
+    workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(_0x5912))
+    
+    local _0x98d0 = { [1] = "=P" }
+    workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(_0x98d0))
+    
+    local _0x2d58 = { [1] = "Squid Army" }
+    workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(_0x2d58))
+    
+    local _0x59d0 = { [1] = "=D" }
+    workspace:WaitForChild("CheckCodeFunction"):InvokeServer(unpack(_0x59d0))
+end)
+
+local _0x9a4a = _0xe7e5:NewTab("Teleport")
+local _0x372a = _0x9a4a:NewSection("teleport to the waterfall")
+
+_0x372a:NewButton("teleport", "lol", function()
+    local _0x1783 = Vector3.new(148.0872039794922, -9.89252758026123, 1158.371337890625)
+    local _0x1353 = game.Players.LocalPlayer
+    local _0x5793 = _0x1353.Character or _0x1353.CharacterAdded:Wait()
+    local _0x79d0 = _0x5793:WaitForChild("HumanoidRootPart")
+    _0x79d0.CFrame = CFrame.new(_0x1783)
+end)
+
+local _0x32b8 = _0x9a4a:NewSection("teleport to the chest")
+_0x32b8:NewButton("teleport", "lol", function()
+    local _0x5393 = Vector3.new(-55.24008560180664, -360.3966369628906, 9479.9638671875)
+    local _0x9d6b = game.Players.LocalPlayer
+    local _0x9c1d = _0x9d6b.Character or _0x9d6b.CharacterAdded:Wait()
+    local _0x72c1 = _0x9c1d:WaitForChild("HumanoidRootPart")
+    _0x
